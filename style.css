@@ -1,0 +1,62 @@
+body, h3 {
+    margin: 0;
+}
+
+.wrap {
+    height: 100vh;
+    background-image: url('src/배경이미지.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+h3{
+    margin: 50px 0 20px;
+    font-size: 80px;
+    font-family: 'Sansita', sans-serif;
+    position: relative;
+}
+
+h3::before,
+h3::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-image: url('src/귤.png');
+    background-position: center;
+    background-size: contain;
+}
+
+h3::before {
+    top: 10px;
+    left: -100px;
+}
+
+h3::after {
+    top: 10px;
+    right: -100px;
+}
+
+#map {
+    height: 600px;
+    width: 70%;
+    border-radius: 25px;
+}
+
+.or-head {
+    font-size: 15px;
+    font-weight: bold;
+    color: #e87007;
+}
+
+.or-cont {
+    font-size: 14px;
+}
+
+i {
+    color:darkgreen;
+}
