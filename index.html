@@ -21,7 +21,7 @@
         async function loadData() {
             let dataLength = 1;
             for(let i = 1; i <= dataLength ; i++) {
-                const data = await fetch(`https://api.odcloud.kr/api/15096996/v1/uddi:6738a90c-ec96-4245-a187-9528cea62904?page=${i}&perPage=10&serviceKey=3MCBWEYPV4%2BY4Un8XqdBpFBiaGQKGsEVpC1HIK1DCoHqjNlhaUGcwjBIJGDYeTaTOiG4GKJorKXpGpfNpOEjhQ%3D%3D`) //프로미스(상태, 리스폰스객체) 반환
+                const data = await fetch(`https://api.odcloud.kr/api/15096996/v1/uddi:6738a90c-ec96-4245-a187-9528cea62904?page=${i}&perPage=10&serviceKey=3MCBWEYPV4%2BY4Un8XqdBpFBiaGQKGsEVpC1HIK1DCoHqjNlhaUGcwjBIJGDYeTaTOiG4GKJorKXpGpfNpOEjhQ%3D%3D`) 
                 // console.log(data);
                 const mainData = await data.json();
                 console.log(mainData);
