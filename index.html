@@ -23,7 +23,7 @@
             for(let i = 1; i <= dataLength ; i++) {
                 const data = await fetch(`https://api.odcloud.kr/api/15096996/v1/uddi:6738a90c-ec96-4245-a187-9528cea62904?page=${i}&perPage=10&serviceKey=3MCBWEYPV4%2BY4Un8XqdBpFBiaGQKGsEVpC1HIK1DCoHqjNlhaUGcwjBIJGDYeTaTOiG4GKJorKXpGpfNpOEjhQ%3D%3D`) //프로미스(상태, 리스폰스객체) 반환
                 // console.log(data);
-                const mainData = await data.json(); //프로미스(상태, 리스폰스 객체에서 본문 컨텐츠 추출한 내용) 반환
+                const mainData = await data.json();
                 console.log(mainData);
                 datas.push(...mainData.data);
                 dataLength = mainData["perPage"];
@@ -56,13 +56,13 @@
                     })
                     
 
-                    const myCity = new google.maps.Circle({ //얘는 변수까지 세트로.
+                    const myCity = new google.maps.Circle({ 
                         center: { lat: parseFloat(datas[i]["위도"]), lng: parseFloat(datas[i]["경도"] )},
-                        radius: parseFloat(datas[i]["비고(m)"]) * 9, //표고(표고에 10 정도 곱하거나 해서 원 크기를 조절해주기)
+                        radius: parseFloat(datas[i]["비고(m)"]) * 9, //표고
                         strokeColor: "#0282d1", //테두리컬러
                         strokeOpacity: 0.8, //투명도
                         strokeWeight: 1, //선의 두께
-                        fillColor: "#0282d1", //어떤 색으로 채울지
+                        fillColor: "#0282d1", //채울 색
                         fillOpacity: 0.4, //투명도
                     });
                     myCity.setMap(map);
